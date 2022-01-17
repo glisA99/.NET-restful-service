@@ -13,23 +13,29 @@ public class ProfessorService : IService<Professor>
         _context = context;
     }
 
-    public ICollection<Professor> GetAll() {
+    public IEnumerable<Professor> GetAll()
+    {
         return _context.Professor.AsNoTracking().ToList();
     }
 
-    public Professor? GetByID(int id) {
+    public Professor? GetByID(int id)
+    {
         return _context.Professor.AsNoTracking().SingleOrDefault(p => p.Id == id);
     }
 
-    public void Delete(int id) {
+    public void Delete(int id)
+    {
         var professor = _context.Professor.Find(id);
-        if (professor is not null) {
+        if (professor is not null)
+        {
             _context.Professor.Remove(professor);
             _context.SaveChanges();
-        } else throw new System.Exception("Invalid professor ID!");
+        }
+        else throw new System.Exception("Invalid professor ID!");
     }
 
-    public Professor Create(Professor professor) {
+    public Professor Create(Professor professor)
+    {
         _context.Professor.Add(professor);
         _context.SaveChanges();
 
