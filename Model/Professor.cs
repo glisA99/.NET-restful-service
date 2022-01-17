@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Project.Models;
+namespace EPOSProject.Models;
 public class Professor 
 {
 

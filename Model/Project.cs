@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Project.Models;
+namespace EPOSProject.Models;
 public class Project 
 {
 
@@ -10,7 +10,7 @@ public class Project
     [MaxLength(50)]
     public string Title { get; set; }
 
-    public Nullable<Int> Score { get; set; }
+    public Nullable<int> Score { get; set; }
 
     [Required]
     public bool Finished { get; set; }
@@ -22,12 +22,12 @@ public class Project
     public Professor Professor { get; set; }
 
     public Project() {
-        this.finished = false;
+
     }
 
     public Project(string title, bool finished,ICollection<Student> students, Professor professor,int? score) {
         this.Title = title;
-        this.finished = finished;
+        this.Finished = finished;
         this.Students = students;
         this.Professor = professor;
         this.Finished = finished;

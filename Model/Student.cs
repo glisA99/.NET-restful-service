@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Project.Models;
+namespace EPOSProject.Models;
 public class Student 
 {
 
@@ -19,7 +19,7 @@ public class Student
     public string Lastname { get; set; }
 
     public Student() {
-
+        
     }
 
     public Student(string index, string firstname, string lastname) {
