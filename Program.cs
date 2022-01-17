@@ -1,4 +1,5 @@
 using EPOSProject.Data;
+using EPOSProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSqlite<ProjectContext>("Data Source=EPOSProject.db");
 
+builder.Services.AddScoped<ProjectService>();
+builder.Services.AddScoped<StudentService>();
+builder.Services.AddScoped<ProfessorService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,9 +26,9 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
-app.UseAuthorization();
+// app.UseAuthorization();
 
 app.MapControllers();
 
