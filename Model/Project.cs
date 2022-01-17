@@ -8,7 +8,7 @@ public class Project
 
     [Required]
     [MaxLength(50)]
-    public string Title { get; set; }
+    public string? Title { get; set; }
 
     public Nullable<int> Score { get; set; }
 
@@ -16,10 +16,10 @@ public class Project
     public bool Finished { get; set; }
 
     [Required]
-    public ICollection<Student> Students { get; set; }
+    public ICollection<Student>? Students { get; set; }
 
     [Required]
-    public Professor Professor { get; set; }
+    public Professor? Professor { get; set; }
 
     public Project() {
 

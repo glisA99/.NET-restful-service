@@ -8,15 +8,15 @@ public class Student
 
     [Required]
     [MaxLength(9)]
-    public string Index { get; set; }
+    public string? Index { get; set; }
 
     [Required]
     [MaxLength(20)]
-    public string Firstname { get; set; }
+    public string? Firstname { get; set; }
 
     [Required]
     [MaxLength(20)]
-    public string Lastname { get; set; }
+    public string? Lastname { get; set; }
 
     public Student() {
         

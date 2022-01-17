@@ -8,11 +8,11 @@ public class Professor
 
     [Required]
     [MaxLength(20)]
-    public string Firstname { get; set; }
+    public string? Firstname { get; set; }
 
     [Required]
     [MaxLength(20)]
-    public string Lastname { get; set; }
+    public string? Lastname { get; set; }
 
     public Professor() {
         
